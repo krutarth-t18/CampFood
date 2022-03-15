@@ -10,13 +10,6 @@ from CampFood import app
 def index():
     form = RegisterForm()
     show_data = Items.query.all()
-    #
-    # if form.validate_on_submit():
-    #     register = Registration(fullname=form.fullname.data, username=form.username.data,
-    #                             password=form.confirm_password.data, ph_no=form.ph_no.data)
-    #     db.session.add(register)
-    #     db.session.commit()
-    #     return redirect('/signin2')
 
     return render_template('index.html', form=form, show_data=show_data)
 
