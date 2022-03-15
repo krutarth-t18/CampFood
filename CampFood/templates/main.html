@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block Signup %} main - {% endblock Signup %}
+{% block body %}
+  <div class="container my-4" style="width:1000 px;">
+      <form action="/" method="post">
+      <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="Name" name="name">
+      </div>
+
+      <div class="mb-3">
+        <label for="ph_no" class="form-label">ph_no</label>
+        <input type="text" class="form-control" id="ph_no" name="ph_no">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+{% endblock body %}

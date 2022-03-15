@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block Signup %} show -  {% endblock Signup %}
+{% block body %}
+
+
+<!--<div class="row row-cols-1 row-cols-md-4 g-2 my-4" style="padding-bottom: 5px;" id="main_food_div">-->
+<div class="container my-3" style="width:800px;">
+<form action="/show">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Sno</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Ph_no</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {% for data in show_data %}
+                    <tr>
+                      <th scope="row">{{loop.index}}</th>
+                      <td>{{data.name}}</td>
+                      <td>{{data.ph_no}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+</form>
+</div>
+{% endblock body %}
